@@ -7,14 +7,17 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env: 
+      FILENAME: de.swerik.template.universal-1.0.0.tgz
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: ls $GITHUB_WORKSPACE
-
-      - name: Run a multi-line script
+      - name: Zip
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cd Release 
+          tar -czvf $FILENAME package 
+          cd ..
+
+      - name: Publish template
+        run: echo Release/$FILENAME
