@@ -3,14 +3,12 @@ name: Release
 on:
   push:
     branches: [ main ]
-#      tags:
-#        - '*.*.*' # Push events to matching *.*.*, i.e. 1.0.0, 187.753.5
+      tags:
+        - '*.*.*' # Push events to matching *.*.*, i.e. 1.0.0, 187.753.5
 
 jobs:
   release:
     runs-on: ubuntu-latest
-#    env:
-#      FILENAME: de.swerik.template.universal-${{ github.ref ##*/ }}.tgz
 
     steps:
       - uses: actions/checkout@v2
