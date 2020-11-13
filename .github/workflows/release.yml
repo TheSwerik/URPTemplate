@@ -3,11 +3,11 @@ name: Release
 on:
   push:
     branches: [ main ]
-    
+
 jobs:
   release:
     runs-on: ubuntu-latest
-    env: 
+    env:
       FILENAME: de.swerik.template.universal-1.0.0.tgz
 
     steps:
@@ -18,11 +18,11 @@ jobs:
           cd Release 
           tar -czvf $FILENAME package
 
-      -name: Test
+      - name: Test
         run: ls
 
       - name: Publish template
-      - uses: actions/upload-artifact@v2
-        with:
-          name: $FILENAME
-          path: Release/$FILENAME
+        - uses: actions/upload-artifact@v2
+          with:
+            name: $FILENAME
+            path: Release/$FILENAME
