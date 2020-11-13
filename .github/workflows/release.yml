@@ -21,7 +21,8 @@ jobs:
       - name: Test
         run: ls
 
+      # Upload artifact
       - uses: actions/upload-artifact@v2
         with:
-          name: $FILENAME
-          path: Release/$FILENAME
+          name: {$FILENAME}
+          path: Release/{$FILENAME}
