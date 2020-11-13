@@ -6,7 +6,7 @@ This is an URP Template without any example Assets but with recommended Settings
 
 ## How to install
 * Download the [latest Release](https://github.com/TheSwerik/URPTemplate/releases)
-* put the file into `INSTALL_FOLDER_OF_UNITY_EDITOR\Editor\Data\Resources\PackageManager\ProjectTemplates`.
+* Put the file into `INSTALL_FOLDER_OF_UNITY_EDITOR\Editor\Data\Resources\PackageManager\ProjectTemplates`
 * Restart Unity Hub if you are using it. If not restart Unity
 
 ## How to create your own Template
