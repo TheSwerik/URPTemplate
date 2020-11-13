@@ -27,8 +27,7 @@ jobs:
           cp -r ProjectSettings Release/package/ProjectData~/ProjectSettings
 
       - name: Update Version
-        run: |
-          echo $VERSION
+        run: sed -i 's/-1.-1.-1/${VERSION}/g' Release/package/package.json
           
       - name: Zip
         run: |
