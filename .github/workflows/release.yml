@@ -21,7 +21,6 @@ jobs:
       - name: Test
         run: ls
 
-      - name: Publish template
       - uses: actions/upload-artifact@v2
         with:
           name: $FILENAME
