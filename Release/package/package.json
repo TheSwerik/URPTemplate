@@ -1,0 +1,20 @@
+{
+  "name": "de.swerik.template.universal",
+  "displayName": "Sweriks URP",
+  "version": "1.0.0",
+  "type": "template",
+  "unity": "2020.2",
+  "host": "hub",
+  "description": "Configures your Project with the Universal Render Pipeline and some recommended Packages but without the Example Assets.",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "10.1.0"
+  },
+  "upmCi": {
+    "footprint": "7278d00ea960f11c170700ca7c13406364d8ac47"
+  },
+  "repository": {
+    "url": "https://github.com/TheSwerik/URPTemplate.git",
+    "type": "git",
+    "revision": "498ed25ba335a7c2436446719ed23fe23a7ab1c4"
+  }
+}

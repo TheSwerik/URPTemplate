@@ -1,6 +1,6 @@
-# CI Status
+## CI Status
 
-![Build Status](https://github.com/TheSwerik/URPTemplate/workflows/release/badge.svg)
+https://github.com/TheSwerik/URPTemplate/workflows/release/badge.svg
 
 # About _Sweriks URP Template_
 
