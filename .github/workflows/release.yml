@@ -13,10 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
           
-      - name: Get Version
-        run: |
-          echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-          echo "FILENAME=de.swerik.template.universal-${VERSION}.tgz" >> $GITHUB_ENV
+      - name: Create Version Variable
+        run: echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        
+      - name: Create Filename Variable
+        run: echo "FILENAME=de.swerik.template.universal-${VERSION}.tgz" >> $GITHUB_ENV
 
       - name: Copy Folders
         run: |
