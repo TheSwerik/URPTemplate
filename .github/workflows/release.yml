@@ -16,8 +16,7 @@ jobs:
       - name: Zip
         run: |
           cd Release 
-          tar -czvf $FILENAME package 
-          cd ..
+          tar -czvf $FILENAME package
 
       - name: Publish template
         run: echo Release/$FILENAME
