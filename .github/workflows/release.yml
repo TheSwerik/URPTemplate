@@ -19,13 +19,14 @@ jobs:
       - name: Create Filename Variable
         run: echo "FILENAME=de.swerik.template.universal-${VERSION}.tgz" >> $GITHUB_ENV
 
-      - name: Create Empty Asset Folders
+      - name: Create Empty Asset Folders and Remove ProjectVersion
         run: |
           mkdir Assets/Animations
           mkdir Assets/Models
           mkdir Assets/Prefabs
           mkdir Assets/Shaders
           mkdir Assets/VFX
+          rm ProjectSettings/ProjectVersion.txt
           
       - name: Copy Folders
         run: |
