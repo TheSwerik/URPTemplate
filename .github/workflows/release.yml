@@ -18,5 +18,11 @@ jobs:
           cd Release 
           tar -czvf $FILENAME package
 
+      -name: Test
+        run: ls
+
       - name: Publish template
-        run: echo Release/$FILENAME
+      - uses: actions/upload-artifact@v2
+        with:
+          name: $FILENAME
+          path: Release/$FILENAME
