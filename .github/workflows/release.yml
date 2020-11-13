@@ -3,21 +3,29 @@ name: Release
 on:
   push:
     branches: [ main ]
+#      tags:
+#        - '*.*.*' # Push events to matching *.*.*, i.e. 1.0.0, 187.753.5
 
 jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      FILENAME: de.swerik.template.universal-1.0.0.tgz
+      FILENAME: de.swerik.template.universal-${{ github.ref }}.tgz
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Copy Folders
+        run: |
+          cp Assets Release/package/ProjectData~/Assets
+          cp Packages Release/package/ProjectData~/Packages
+          cp ProjectSettings Release/package/ProjectData~/ProjectSettings
 
       - name: Zip
         run: |
           cd Release 
           tar -czvf $FILENAME package
-
+          
       - name: Test
         run: ls
 
@@ -26,3 +34,18 @@ jobs:
         with:
           name: ${{ env.FILENAME }}
           path: Release/${{ env.FILENAME }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            * First Change
+            * Second Change
+          draft: false
+          prerelease: false
