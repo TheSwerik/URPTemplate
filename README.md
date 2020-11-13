@@ -2,10 +2,12 @@
 
 ![Release](https://github.com/TheSwerik/URPTemplate/workflows/Release/badge.svg)
 
-This is an URP Template without any example Assets but with recommended Settings and preinstalled Packages.
+This is an URP Template without any example Assets but with recommended Settings and preinstalled Packages. (recommended by me)
 
 ## How to install
-Download the [latest Release](https://github.com/TheSwerik/URPTemplate/releases) and put the file into `INSTALL_FOLDER_OF_UNITY_EDITOR\Editor\Data\Resources\PackageManager\ProjectTemplates`.
+* Download the [latest Release](https://github.com/TheSwerik/URPTemplate/releases)
+* put the file into `INSTALL_FOLDER_OF_UNITY_EDITOR\Editor\Data\Resources\PackageManager\ProjectTemplates`.
+* Restart Unity Hub if you are using it. If not restart Unity
 
 ## How to create your own Template
 * Download and unzip the [latest Release](https://github.com/TheSwerik/URPTemplate/releases)
