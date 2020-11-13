@@ -9,11 +9,16 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      FILENAME: de.swerik.template.universal-${{ github.ref }}.tgz
+#    env:
+#      FILENAME: de.swerik.template.universal-${{ github.ref ##*/ }}.tgz
 
     steps:
       - uses: actions/checkout@v2
+          
+      - name: Get Version
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          echo "FILENAME=de.swerik.template.universal-$VERSION.tgz" >> $GITHUB_ENV
 
       - name: Copy Folders
         run: |
