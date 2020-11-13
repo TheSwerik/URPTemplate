@@ -16,7 +16,7 @@ jobs:
       - name: Get Version
         run: |
           echo "VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-          echo "FILENAME=de.swerik.template.universal-{$VERSION}.tgz" >> $GITHUB_ENV
+          echo "FILENAME=de.swerik.template.universal-${VERSION}.tgz" >> $GITHUB_ENV
 
       - name: Copy Folders
         run: |
