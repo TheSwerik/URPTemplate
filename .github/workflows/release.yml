@@ -22,7 +22,7 @@ jobs:
         run: ls
 
       - name: Publish template
-        - uses: actions/upload-artifact@v2
-          with:
-            name: $FILENAME
-            path: Release/$FILENAME
+      - uses: actions/upload-artifact@v2
+        with:
+          name: $FILENAME
+          path: Release/$FILENAME
