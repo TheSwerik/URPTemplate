@@ -17,9 +17,9 @@ jobs:
 
       - name: Copy Folders
         run: |
-          cp Assets Release/package/ProjectData~/Assets
-          cp Packages Release/package/ProjectData~/Packages
-          cp ProjectSettings Release/package/ProjectData~/ProjectSettings
+          cp -r Assets Release/package/ProjectData~/Assets
+          cp -r Packages Release/package/ProjectData~/Packages
+          cp -r ProjectSettings Release/package/ProjectData~/ProjectSettings
 
       - name: Zip
         run: |
